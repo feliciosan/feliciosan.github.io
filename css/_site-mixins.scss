@@ -1,0 +1,42 @@
+/* MIXINS AND FUNCTIONS ------------------------------------------------*/
+
+@mixin opacity($value){
+	$IEValue: $value*100;
+	opacity: $value;
+	filter: alpha(opacity=$IEValue);
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content};
+  &:-moz-placeholder {@content};
+  &::-moz-placeholder {@content};
+  &:-ms-input-placeholder {@content};
+}
+
+/* HELPERS -----------------------------------------------------------*/
+
+
+.trans{
+  transition: all .25s ease-in-out;
+  -webkit-transition: all .25s ease-in-out;
+}
+.trans-plus{
+  transition: all .5s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
+}
+
+@mixin transform($value) {
+    -moz-transform: $value;
+    -o-transform: $value;
+    -ms-transform: $value;
+    -webkit-transform: $value;
+    transform: $value;
+}
+
+@mixin transition($value) {
+    -moz-transition: $value;
+    -o-transition: $value;
+    -ms-transition: $value;
+    -webkit-transition: $value;
+    transition: $value;
+}

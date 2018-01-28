@@ -1,0 +1,118 @@
+/* FOOTER -----------------------------------------------------------*/
+
+.footer{
+	background: #1a1a23;
+	.container{
+		display: flex;
+		align-items: center;
+	}
+	.title-section{
+		font-size: 70px;
+		color: rgba($branco, .4);
+		position: relative;
+		font-family: $font-work;
+		font-weight: bold;
+		line-height: 100px;
+		margin: 0;
+		&:after{
+			content: '';
+			position: absolute;
+			width: 60%;
+			height: 1px;
+			background: $amarelo;
+			left: 0;
+			top: 50%;
+		}
+	}
+
+	.title-small{
+		text-transform: uppercase;
+		font-size: 20px;
+		line-height: 30px;
+	}
+
+	.box-contato{
+		.info-contato{
+			color: $branco;
+			li{
+				font-size: 18px;
+				font-family: $font-work;
+				color: rgba($branco, .4);
+				span{
+					display: block;
+					font-size: 20px;
+					font-weight: 700;
+
+				}
+				&:first-child{
+					padding-bottom: 20px;
+				}
+			}
+		}
+	}
+	.title{
+		text-transform: uppercase;
+		font-size: 30px;
+	}
+	.sociais{
+		li{
+			display: inline-block;
+			margin: 0 10px;
+			text-align: center;
+			a{
+				width: 60px;
+				height: 60px;
+				background: #f3f3f3;
+				text-align: center;
+				border-radius: 10px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				@extend .trans;
+				i{
+					font-size: 30px;
+					color: $azul-escuro;
+				}
+				&:hover{
+					background: #201f27;
+					i{
+						color: $branco !important;
+					}
+				}
+			}
+
+		}
+	}
+}
+.copyright{
+	font-size: 14px;
+	margin: 30px 0;
+	display: block;
+	color: $branco;
+}
+
+@media (max-width: $screen-sm-max) {
+    .footer {
+        background: #1a1a23;
+        .container {
+            display: block;
+        }
+        .copyright {
+            margin: 25px 0 30px;
+            font-size: 12px;
+        }
+        .box-contato{
+            margin-top: 30px;
+        }
+        .sociais{
+            margin-top: 40px;
+            li:first-child{
+                margin-left: 0;
+            }
+        }
+        .title-section {
+            font-size: 40px;
+            line-height: 55px;
+        }
+    }
+}

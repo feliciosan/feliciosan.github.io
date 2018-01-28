@@ -1,0 +1,24 @@
+{
+  "name": "bold",
+  "authors": [
+    "Felício Santos <feliciosantoslive@outlook.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "libs"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "bourbon": "^4.2.7",
+    "font-awesome": "^4.6.3",
+    "mdi": "^1.7.22",
+    "owl.carousel": "^2.2.1"
+  }
+}

@@ -1,0 +1,56 @@
+/* TITLES -----------------------------------------------------------*/
+
+.title{
+	font-size: 48px;
+	color: $azul-escuro;
+	font-family: $font-work;
+	font-weight: 700;
+}
+.title-small{
+	font-size: 28px;
+	font-family: $font-work;
+	font-weight: 700;
+}
+.main-title{
+	font-size: 30px;
+	text-transform: uppercase;
+	color: $branco;
+	margin-top: 45px;
+	color: $cinza-escuro;
+	font-family: $font-work;
+	font-weight: 700;
+}
+
+.subtitle-destaque{
+	font-size: 16px;
+	color: $branco;
+	font-family: $font-work;
+}
+.subtitle-section{
+	font-size: 40px;
+	text-transform: uppercase;
+	position: relative;
+	font-weight: 700;
+	font-family: $font-work;
+	color: #b2b2b2;
+}
+.title-section{
+	font-family: $font-work;
+	font-size: 40px;
+	position: relative;
+	text-transform: uppercase;
+	color: $branco;
+
+}
+@media (max-width: $screen-xs-max) {
+	.title-section{
+		font-size: 24px;
+		//margin: 0 0 30px;
+	}
+	//.title{
+	//	font-size: 20px !important;
+	//}
+	.title-small{
+		font-size: 18px;
+	}
+}

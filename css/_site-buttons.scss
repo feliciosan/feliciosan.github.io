@@ -1,0 +1,30 @@
+/* BUTTONS -----------------------------------------------------------*/
+
+@mixin btn-color($color, $bg-color, $color-hover, $bg-hover) {
+	color: $color;
+	background: $bg-color;
+	&:hover, &:focus{
+		color: $color-hover;
+		background: $bg-hover;
+	}
+}
+
+.btn-base{
+	@extend .trans;
+	font-family: $font-default;
+	display: inline-block;
+	height: 30px;
+	padding: 0 10px;
+	font-size: 14px;
+	border: 1px solid $preto;
+	color: $preto;
+	text-decoration: none;
+	border-radius: 0;
+	outline: none;
+
+	&.btn-blue{
+		background: $azul;
+		color: $branco;
+	}
+
+}

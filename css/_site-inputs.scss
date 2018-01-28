@@ -1,0 +1,20 @@
+/* INPUTS -----------------------------------------------------------*/
+
+.input{
+	@extend .trans;
+	border: 1px solid $preto;
+	padding: 10px;
+	font-family: $font-default;
+	background-color: $branco;
+	color: $text-color;
+	@include placeholder {
+		color: red;
+	}
+	&:focus{
+		border-color: $preto;
+	}
+}
+
+.select{
+	font-family: $font-default;	
+}

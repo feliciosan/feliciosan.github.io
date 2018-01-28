@@ -1,0 +1,414 @@
+/* DEFAULT CSS -----------------------------------------------------------*/
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: $font-default;
+    font-size: 16px;
+    color: $text-color;
+    overflow-x: hidden;
+    width: 100%;
+    background: #f9f9f9;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+p{
+    font-family: $font-work;
+}
+
+.my-page-loading {
+    position: fixed;
+    z-index: 999;
+    height: 100vh;
+    width: 100%;
+    background: $branco;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    div {
+        text-align: center;
+        color: $cinza-escuro;
+        font-weight: 600;
+    }
+}
+
+// HELPERS --------------------
+.flex-display-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-padding {
+    padding-top: 70px;
+    padding-bottom: 65px;
+}
+
+.blockable {
+    float: left;
+    width: 100%;
+}
+// ----------------------------
+a {
+    color: $link-color;
+    &:hover, &:focus {
+        color: $link-color-hover;
+        text-decoration: none;
+    }
+}
+.my-list{
+    background: #ccc;
+}
+
+// MIDDLE
+.middle {
+    @extend .trans;
+
+    // --------------- HOME ---------------//
+    #home {
+        background: url("../img/bg.jpg") no-repeat center;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        perspective: 1000px;
+        background-size: cover;
+        background-attachment: fixed;
+        .title-featured{
+            font-size: 60px;
+            color: $branco;
+            position: absolute;
+            letter-spacing: 25px;
+            text-transform: uppercase;
+            font-family: $font-work;
+            font-weight: 600;
+            margin: 0;
+            padding: 3px 15px 5px 30px;
+            &:after, &:before{
+                content: '';
+                position: absolute;
+                width: 45vw;
+                height: 1px;
+                background: $amarelo;
+            }
+            &:before{
+                top: -50px;
+                right: 0;
+            }
+            &:after{
+                bottom: -60px;
+                left: 0;
+            }
+
+        }
+        .title-code{
+
+            color: $branco;
+            font-size: 180px;
+            font-weight: bold;
+            text-shadow: -30px -30px 0px rgba($branco,0.1);
+            opacity: .2;
+            line-height: 240px;
+            span{
+                position: relative;
+                &.name-felicio{
+                    &:after{
+                         content: 'Felício';
+                         position: absolute;
+                         font-size: 32px;
+                         font-weight: lighter;
+                         text-transform: uppercase;
+                         right: -150px;
+                     }
+                }
+                &.name-santos{
+                    &:before{
+                        content: 'Santos';
+                        position: absolute;
+                        font-size: 32px;
+                        font-weight: lighter;
+                        left: -150px;
+                        text-transform: uppercase;
+                    }
+                }
+
+            }
+
+        }
+        &:before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(#1a1a23, 0.97);
+        }
+    }
+
+    // --------------- EXPERTISE ---------------//
+    #expertise{
+        background: #201f27;
+        .expertise__box{
+            margin-top: 35px;
+            @extend .blockable;
+            .expertise__box-lang{
+                position: relative;
+                margin-top: 40px;
+                i{
+                    position: relative;
+                    z-index: 1;
+                    font-size: 140px;
+                    &.html-color{
+                    }
+                    &.css-color{
+                    }
+                    &.javascrcipt-color{
+                    }
+                    &.backend-color{
+                    }
+                    color: rgba($branco,.6);
+                }
+                &:before{
+                    content: '';
+                    position: absolute;
+                    width: 45vw;
+                    height: 1px;
+                    background: $amarelo;
+                    left: 0;
+                    top: 0;
+                }
+            }
+        }
+        .expertise__list{
+            padding-left: 20px;
+            li {
+                list-style: disc;
+                margin: 10px 0;
+                color: $branco;
+                font-size: 20px;
+                font-family: $font-default;
+            }
+        }
+    }
+
+
+    // --------------- ABOUT ME ---------------//
+    #about-me {
+        background: #201f27;
+        .title-about{
+            font-size: 110px;
+            color: rgba($branco, .5);
+            position: relative;
+            &:after{
+                content: '';
+                position: absolute;
+                width: 60%;
+                height: 2px;
+                background: $amarelo;
+                left: 0;
+                top: 50%;
+            }
+        }
+        .about-me__content{
+            float: left;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            .description-about{
+                padding: 50px 0 70px 50px;
+                border-left: 1px solid rgba($branco,.1);
+            }
+            .img-responsive{
+                border-top-left-radius: 30px;
+                border-bottom-right-radius: 30px;
+            }
+        }
+    }
+    p{
+        font-size: 20px;
+        line-height: 40px;
+        color: $branco;
+    }
+
+    // --------------- PORTFOLIO ---------------//
+    #portfolio {
+        @extend .blockable;
+        background: #1a1a23;
+        .portfolio__box{
+            margin-top: 50px;
+            .portfolio__item {
+                padding: 15px;
+                position: relative;
+                @extend .trans;
+                margin-top: 15px;
+                .portfolio__item-title{
+                    font-size: 22px;
+                    height: 75px;
+                    color: $branco;
+                    border-top: 2px solid $amarelo;
+                    display: table;
+                    padding-top: 25px;
+                    margin: 0 auto;
+                }
+                .portfolio__item__figure {
+                    img{
+                        width: 100%;
+                        @extend .trans;
+                        -webkit-filter: grayscale(30%);
+                        opacity: 0.5;
+                    }
+                }
+
+                .caption {
+                    padding: 30px;
+                    height: 130px;
+                    p {
+                        font-size: 18px;
+                        color: $branco;
+                    }
+                }
+                &:hover{
+                    background: rgba($branco, .03);
+                    @include transform(scale(1.08));
+                    .portfolio__item__figure {
+                        img{
+                            -webkit-filter: grayscale(0);
+                            opacity: 1;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media (max-width: $screen-sm-max) {
+
+    .middle {
+
+        #home {
+            .title-featured{
+                font-size: 40px;
+                letter-spacing: 8px;
+                padding: 0;
+            }
+            .title-code {
+                font-size: 200px;
+            }
+        }
+        #about-me {
+            .about-me__content{
+                padding: 0 15px;
+                display: block;
+                .title-about{
+                    font-size: 80px;
+                    &:after{
+                        top: 100%;
+                    }
+                    br{
+                        display: none;
+                    }
+                }
+                .description-about{
+                    padding: 20px 0 10px 15px;
+                }
+                .img-responsive{
+                    margin-top: 35px;
+                }
+            }
+        }
+        #portfolio{
+            .container{
+                padding: 0 30px;
+            }
+        }
+        #expertise{
+            .container{
+                padding: 0 30px;
+            }
+            .expertise__box .expertise__box-lang i{
+                font-size: 100px;
+            }
+        }
+    }
+}
+
+@media (max-width: $screen-xs-max) {
+    .section-padding {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .middle {
+        p{
+            font-size: 16px;
+            line-height: 30px;
+        }
+        #home {
+            padding: 50px 0;
+            height: auto;
+            .title-featured{
+                font-size: 100%;
+                letter-spacing: 5px;
+                &:before{
+                    top: -30px;
+                }
+                &:after{
+                    bottom: -35px;
+                }
+            }
+            .title-code {
+                font-size: 95px;
+                line-height: 130px;
+                span.name-felicio:after {
+                    font-size: 20px;
+                    right: -60%;
+                }
+                span.name-santos:before{
+                    font-size: 20px;
+                    left: -60%;
+                }
+            }
+        }
+        #about-me {
+            .about-me__content{
+                .title-about{
+                    font-size: 40px;
+                }
+                .description-about{
+                    //padding: 20px 0 10px;
+                }
+            }
+        }
+        #portfolio{
+            .container{
+                padding: 0 30px;
+            }
+            .portfolio__box .portfolio__item .portfolio__item-title{
+                font-size: 18px;
+                display: block;
+            }
+        }
+        #expertise{
+            .expertise__box{
+                margin-top: 20px;
+                .expertise__box-lang i{
+                    font-size: 45px;
+                }
+            }
+            .expertise__list{
+                li {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+}
