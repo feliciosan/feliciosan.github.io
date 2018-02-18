@@ -31,6 +31,19 @@ gulp.task('browserSync', function() {
     });
 });
 
+gulp.task('sass-production', function() {
+    return gulp.src('./css/*.scss') // Gets all files ending with .scss in app/scss
+        .pipe(plumber({
+            handleError: function (err) {
+                console.log(err)
+                this.emit('end')
+            }
+        }))
+        .pipe(sass().on('error', sass.logError))
+        .pipe(sass({outputStyle: 'compressed'}))
+        .pipe(gulp.dest('./css/'))
+});
+
 gulp.task('sass', function() {
   return gulp.src('./css/*.scss') // Gets all files ending with .scss in app/scss
     .pipe(plumber({

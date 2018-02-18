@@ -14,6 +14,7 @@ body {
 }
 
 ul {
+
     padding: 0;
     list-style: none;
 }
@@ -231,6 +232,7 @@ a {
             }
         }
     }
+
     p{
         font-size: 20px;
         line-height: 40px;
@@ -391,9 +393,18 @@ a {
             .container{
                 padding: 0 30px;
             }
-            .portfolio__box .portfolio__item .portfolio__item-title{
-                font-size: 18px;
-                display: block;
+            .portfolio__box .portfolio__item {
+                background: rgba($branco, .03);
+                .portfolio__item__figure {
+                    img{
+                        -webkit-filter: grayscale(0);
+                        opacity: 1;
+                    }
+                }
+                .portfolio__item-title{
+                    font-size: 18px;
+                    display: block;
+                }
             }
         }
         #expertise{
